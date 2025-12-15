@@ -43,8 +43,9 @@ sh_abundance <- otu_table %>%
 
 sh_abundance
 
-# Drop non-identified OTUs
-sh_abundance <- slice(sh_abundance, -1)
+write.csv(sh_abundance, "./data/sh_abundance.csv", row.names = FALSE)
+
+# Remove samples missing identified fungal SH
 
 
 # Convert to long format and compute richness & read depth
